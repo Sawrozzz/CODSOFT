@@ -4,22 +4,30 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import About from "./components/About";
-
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   return (
-      <React.Fragment>
-        <Header />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/about" element={<About />}></Route>
-          </Routes>
-        </BrowserRouter>
-      </React.Fragment>
+    <React.Fragment>
+      <Header />
+      <div id="home">
+        {" "}
+        <Home />
+      </div>
+      <div id="project">
+        <Projects />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+
+      <Footer />
+    </React.Fragment>
   );
 };
 

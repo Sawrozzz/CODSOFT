@@ -8,26 +8,43 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
 } 
+/* footer css */
+
+.main-footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+
+}
+.footer-rights{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  align-items: center;
+}
+
+/* header css */
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 95%;
-    position: sticky;
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background-color: blanchedalmond;
+  color: rgb(31, 30, 30);
+  z-index: 1000;
 
 }
 .logo-section h2{
     cursor: pointer;
-    margin-top: 5px;
-    margin-right: 5px;
-}
-.nav-section{
-  
-}
-.navbar{
- 
+    float: left;
+  width: 50%;
+  text-align: left;
+  color: #333;
+  padding-left: 15px;
 }
 
 .navbar ul{
@@ -35,21 +52,20 @@ body{
     list-style-type: none;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+   
 }
-.navbar ul li a{
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+.navbar li{
+     display: inline;
+   
+    cursor: pointer;
+}
+.navbar ul li .link{
+   color: white;
+   text-decoration: none;
 }
 
 /* home page css */
 
-/* Home.css */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -75,4 +91,71 @@ body{
  border: #333 solid;
  border-radius: 50%;
  background-color: black;
+}
+
+
+/* project css */
+/* Projects.css */
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.project-section {
+  width: 45%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: #333 solid 1.5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.project-image {
+  width: 80%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.project-languages {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.language-button {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+}
+/* About.css */
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.about-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
