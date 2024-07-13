@@ -58,12 +58,32 @@ body {
 }
 .navbar li {
   display: inline;
-
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .navbar ul li .link {
   color: white;
   text-decoration: none;
+}
+.navbar li:hover {
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .logo-section h2 {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar li {
+    padding: 10px 0;
+  }
 }
 
 /* home page css */
@@ -250,7 +270,6 @@ body {
   }
 }
 
-
 /* Contact.css */
 .contact-main {
   max-width: 800px;
@@ -274,7 +293,8 @@ body {
   margin-top: 10px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
