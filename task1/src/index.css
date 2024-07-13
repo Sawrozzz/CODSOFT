@@ -1,72 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-} 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+}
 /* footer css */
 
-.main-footer{
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    height: 10%;
-
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  height: 10%;
 }
-.footer-rights{
+.footer-rights {
   display: flex;
   justify-content: center;
   padding-top: 15px;
   align-items: center;
 }
-.main-footer a{
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
+.main-footer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
 }
 
 /* header css */
 
-.header{
+.header {
   position: sticky;
   top: 0;
   padding: 10px 0;
   background-color: blanchedalmond;
   color: rgb(31, 30, 30);
   z-index: 1000;
-
 }
-.logo-section h2{
-    cursor: pointer;
-    float: left;
+.logo-section h2 {
+  cursor: pointer;
+  float: left;
   width: 50%;
   text-align: left;
   color: #333;
   padding-left: 15px;
 }
 
-.navbar ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    align-items: center;
-   
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.navbar li{
-     display: inline;
-   
-    cursor: pointer;
+.navbar li {
+  display: inline;
+
+  cursor: pointer;
 }
-.navbar ul li .link{
-   color: white;
-   text-decoration: none;
+.navbar ul li .link {
+  color: white;
+  text-decoration: none;
 }
 
 /* home page css */
@@ -91,13 +88,12 @@ body{
   color: #666;
 }
 .home-image {
- max-width: 50%;
- max-height: 40%;
- border-radius: 50%;
- border: none;
- background-color: black;
+  max-width: 50%;
+  max-height: 40%;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
 }
-
 
 /* project css */
 /* Projects.css */
@@ -120,7 +116,6 @@ body{
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
-
 }
 
 .project-image {
@@ -134,7 +129,6 @@ body{
 .project-languages {
   display: flex;
   flex-wrap: wrap;
- 
 }
 
 .language-button {
@@ -155,7 +149,8 @@ body{
   padding: 20px;
 }
 
-.about-container h2, .about-container h3 {
+.about-container h2,
+.about-container h3 {
   font-size: 2em;
   margin-bottom: 20px;
 }
@@ -166,13 +161,12 @@ body{
   margin-bottom: 20px;
 }
 
-.skill{
+.skill {
   width: 500px;
-  margin:  60px auto;
+  margin: 60px auto;
   color: #000000;
   padding: 20px;
-  box-shadow: 0.14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
-  
+  box-shadow: 0.14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .skill h1 {
@@ -186,75 +180,121 @@ body{
   padding: 10px;
   text-decoration: none;
   list-style-type: none;
-
 }
-.bar{
+.bar {
   background: #353b48;
   display: block;
-   height: 20px;
-   border: 1px solid rgba(0, 0, 0, 0.3);
-   border-radius: 10px;
-   overflow: hidden;
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-
-.bar span{
+.bar span {
   height: 20px;
   float: left;
-  background: linear-gradient(135deg, rgba(38, 78, 118, 1) 0%, rgba(71, 103, 131, 1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(38, 78, 118, 1) 0%,
+    rgba(71, 103, 131, 1) 100%
+  );
 }
 
-.react{
+.react {
   width: 90%;
   animation: react 3s;
 }
-.next{
+.next {
   width: 80%;
   animation: next 4s;
 }
-.node{
+.node {
   width: 50%;
   animation: node 3s;
 }
-.mongodb{
+.mongodb {
   width: 70%;
   animation: mongodb 4s;
 }
 @keyframes react {
-  0%{
+  0% {
     width: 0%;
   }
-  100%{
+  100% {
     width: 90%;
   }
-  
 }
 @keyframes next {
-  0%{
+  0% {
     width: 0%;
   }
-  100%{
+  100% {
     width: 80%;
   }
-  
 }
 @keyframes node {
-  0%{
+  0% {
     width: 0%;
   }
-  100%{
+  100% {
     width: 50%;
   }
-  
 }
 @keyframes mongodb {
-  0%{
+  0% {
     width: 0%;
   }
-  100%{
+  100% {
     width: 70%;
   }
-  
 }
 
+
+/* Contact.css */
+.contact-main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
