@@ -15,6 +15,7 @@ const About = () => {
           structure of coding and always strive to write elegant and efficient
           code.
         </p>
+        <button className="btn">Download Resume</button>
       </div>
       <div className="skill">
         <h1>Skill</h1>
