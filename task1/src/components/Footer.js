@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
         <a
           className="social-icon"
-          href="https://www.facebook.com"
+          href="https://x.com/IamSaroj123"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -20,7 +20,7 @@ const Footer = () => {
         </a>
         <a
           className="social-icon"
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/saw_rose001/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -28,7 +28,7 @@ const Footer = () => {
         </a>
         <a
           className="social-icon"
-          href="https://www.instagram.com"
+          href="https://github.com/Sawrozzz"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,7 +36,7 @@ const Footer = () => {
         </a>{" "}
         <a
           className="social-icon"
-          href="https://www.instagram.com"
+          href="https://www.linkedin.com/in/saroj-adhikari-512235239/"
           target="_blank"
           rel="noopener noreferrer"
         >

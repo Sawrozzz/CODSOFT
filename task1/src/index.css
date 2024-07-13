@@ -8,8 +8,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f4f4f4;
 }
-/* footer css */
 
+/* footer css */
 .main-footer {
   background-color: #333;
   color: #fff;
@@ -32,7 +32,6 @@ body {
 }
 
 /* header css */
-
 .header {
   position: sticky;
   top: 0;
@@ -87,7 +86,6 @@ body {
 }
 
 /* home page css */
-
 .home-container {
   display: flex;
   flex-direction: column;
@@ -100,9 +98,12 @@ body {
 
 .home-title {
   text-align: center;
-  font-size: 4.5em;
+  font-size: 5em;
+    font-family: monospace;
+
   color: #333;
 }
+
 
 .home-subtitle {
   text-align: center;
@@ -134,7 +135,6 @@ body {
 }
 
 /* project css */
-/* Projects.css */
 .projects-container {
   display: flex;
   align-items: center;
@@ -149,6 +149,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   flex-direction: column;
   border: #333 solid 1.5px;
   border-radius: 10px;
@@ -180,7 +181,7 @@ body {
   color: white;
 }
 @media (max-width: 566px) {
-    .project-section {
+  .project-section {
     width: 90%;
     margin-left: 5px;
     margin-right: 5px;
@@ -197,10 +198,7 @@ body {
     margin-bottom: 3px;
     padding: 3px 6px;
   }
-
-
 }
-/* About.css */
 /* About.css */
 .about-container {
   max-width: 800px;
@@ -219,24 +217,25 @@ body {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.about-container .btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+.about-container .btn  {
+  background-color: #4caf50;
+  text-decoration: none ;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .about-container .btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 .about-container .btn:active {
-    background-color: #3e8e41;
-    transform: scale(0.95);
+  background-color: #3e8e41;
+  transform: scale(0.95);
 }
 
 .skill {
@@ -327,9 +326,7 @@ body {
     width: 70%;
   }
 }
-/* Existing CSS... */
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .about-container {
     max-width: 100%;

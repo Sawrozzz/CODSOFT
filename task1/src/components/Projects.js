@@ -18,27 +18,19 @@ const Projects = () => {
       languages: ["Node.js", "MongoDB"],
     },
     {
-      image: "e-com.png",
-      title: "E-commerce Website",
+      image: "tictactoe.png",
+      title: "Tic Tac Toe Game",
       description:
-        "This is an E-commerce website built with Mongodb and Node.js.",
-      languages: ["Node.js", "MongoDB"],
+        "This is a tic tac toe game that is build using react js.",
+      languages: ["React.js", "CSS"],
     },
     {
-      image: "e-com.png",
-      title: "E-commerce Website",
+      image: "ui.png",
+      title: "UI Design",
       description:
-        "This is an E-commerce website built with Mongodb and Node.js.",
-      languages: ["Node.js", "MongoDB"],
+        "A simple UI design created using HTML and CSS.",
+      languages: ["Html", "css"],
     },
-    {
-      image: "e-com.png",
-      title: "E-commerce Website",
-      description:
-        "This is an E-commerce website built with Mongodb and Node.js.",
-      languages: ["Node.js", "MongoDB"],
-    },
-    // Add more projects as needed...
   ];
   return (
     <div className="projects-container">
