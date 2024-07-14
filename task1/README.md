@@ -20,7 +20,8 @@ This is my personal portfolio project, showcasing my skills, projects, and conta
 To run this project, install it locally using npm:
 
 ```bash
-$ cd ../portfolio
+$ git clone https://github.com/Sawrozzz/CODSOFT.git
+$ cd ../task1 
 $ npm install
 $ npm install react-icons
 $ npm start
