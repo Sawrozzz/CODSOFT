@@ -1,6 +1,6 @@
-# Todo List Application
+# Task Track Application
 
-This is a simple Todo List application built with React, Vite, and Redux Toolkit.
+This is a simple Task List application built with React, Vite, and Redux Toolkit.
 
 ## Features
 
