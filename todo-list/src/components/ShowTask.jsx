@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTodo, updateTodo , toggleTodo} from "../features/todo/todoSlice";
+import { deleteTodo, updateTodo, toggleTodo } from "../features/todo/todoSlice";
 
 const ShowTask = () => {
   const todos = useSelector((state) => state.todos);
@@ -57,9 +57,10 @@ const ShowTask = () => {
           ) : (
             <>
               <span
-                className={`text-lg text-center text-wrap text-blue-400 ${
+                className={`text-lg text-center text-wrap text-black ${
                   todo.completed ? "line-through" : ""
                 }`}
+                style={todo.completed ? { textDecorationThickness: "3px" ,color:"blue"} : {}}
               >
                 {todo.text}
               </span>

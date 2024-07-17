@@ -22,7 +22,7 @@ const AddTask = () => {
         placeholder="Add your todo here...."
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="border-2 w-[80%]  bg-white h-20 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+        className="border-2 w-svw px-4 bg-white h-20  pr-16 rounded-lg text-lg focus:outline-none"
       />
       <button
         type="submit"
