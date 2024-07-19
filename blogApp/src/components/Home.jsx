@@ -34,6 +34,7 @@ const Home = ({ isAuth }) => {
 
   return (
     <>
+    <h1 className="text-4xl font-bold text-center mt-4 mb-2">Read all the blogs here</h1>
       <div className="flex flex-col-reverse">
         {posts.map((post) => (
           <div key={post.id} className="bg-white p-4 m-4 rounded-md shadow-md">
