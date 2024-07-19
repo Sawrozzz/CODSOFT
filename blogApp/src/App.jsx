@@ -23,18 +23,26 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <nav className="bg-gray-900 text-2xl text-white flex justify-end gap-4 pr-10 py-5">
-          <Link to="/">Home</Link>
-          {isAuth ? (
-            <>
-              <Link to="/create">Create Post</Link>
+        <nav className="bg-gray-900 font-sans text-white flex justify-around gap-4 py-5 sticky top-0 z-50  ">
+          <Link to='/'>MyBlog</Link>
+          <div className="flex  gap-5 items-center ">
+            <Link to="/">Home</Link>
+            {isAuth ? (
+              <>
+                <Link to="/create">CreatePost</Link>
 
-              <Link to="/profile">Profile</Link>
-              <button onClick={Logout}>Logout</button>
-            </>
-          ) : (
-            <Link to="/login">Login</Link>
-          )}
+                <Link to="/profile">Profile</Link>
+                <button
+                  className="bg-red-500 hover:bg-red-700 py-1 px-2 text-white text-center rounded"
+                  onClick={Logout}
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link className="bg-blue-500 hover:bg-blue-700 py-1 px-2 text-white text-center rounded" to="/login">Login</Link>
+            )}
+          </div>
         </nav>
         <Routes>
           <Route path="/" element={<Home isAuth={isAuth} />} />
