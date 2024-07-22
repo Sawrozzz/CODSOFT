@@ -12,6 +12,11 @@ import UpdateBlog from "./components/UpdateBlog";
 
 const App = () => {
   const [isAuth, setAuth] = useState(localStorage.getItem("isAuth"));
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   const Logout = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -23,25 +28,129 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <nav className="bg-gray-900 font-sans text-white flex justify-around gap-4 py-5 sticky top-0 z-50  ">
-          <Link to='/'>MyBlog</Link>
-          <div className="flex  gap-5 items-center ">
-            <Link to="/">Home</Link>
-            {isAuth ? (
-              <>
-                <Link to="/create">CreatePost</Link>
-
-                <Link to="/profile">Profile</Link>
-                <button
-                  className="bg-red-500 hover:bg-red-700 py-1 px-2 text-white text-center rounded"
-                  onClick={Logout}
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <Link className="bg-blue-500 hover:bg-blue-700 py-1 px-2 text-white text-center rounded" to="/login">Login</Link>
-            )}
+        <nav className="bg-gray-900 text-white px-6 py-4 sticky top-0 z-50 flex flex-wrap items-center justify-between">
+          <Link to="/" className="text-2xl font-bold">
+            MyBlog
+          </Link>
+          <div className=" md:hidden flex flex-col ">
+            <button
+              onClick={toggleMenu}
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block  "
+            >
+              <span className="block relative w-6 h-px rounded-sm bg-white"></span>
+              <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+              <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+            </button>
+            <div
+              className={`md:flex items-end md:w-auto w-full ${
+                isOpen ? "" : "hidden"
+              }`}
+              id="menu"
+            >
+              <nav>
+                <ul className="md:flex  text-base text-gray-700 pt-4 md:pt-0">
+                  <li>
+                    <Link
+                      className="text-lg px-3 py-2 rounded hover:bg-gray-700"
+                      to="/"
+                    >
+                      Home
+                    </Link>
+                    {isAuth ? (
+                      <>
+                        <section className="flex flex-col ">
+                          <Link
+                            to="/create"
+                            className="text-lg px-3 py-2 rounded hover:bg-gray-700"
+                          >
+                            CreatePost
+                          </Link>
+                          <Link
+                            to="/profile"
+                            className="text-lg px-3 py-2 rounded hover:bg-gray-700"
+                          >
+                            Profile
+                          </Link>
+                          <button
+                            className="bg-green-500 hover:bg-red-700 py-2 px-3 text-white text-center rounded"
+                            onClick={Logout}
+                          >
+                            Logout
+                          </button>
+                        </section>
+                      </>
+                    ) : (
+                      <section className="flex flex-col mt-2">
+                        <Link
+                          className="bg-blue-500 hover:bg-blue-700 py-2 px-3 text-white text-center rounded"
+                          to="/login"
+                        >
+                          Login
+                        </Link>
+                      </section>
+                    )}
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            className="hidden md:flex md:items-center md:w-auto w-full"
+            id="menu"
+          >
+            <nav className=" p-2 mt-0 w-full">
+              <div className=" mx-auto flex flex-wrap items-end">
+                <div className=" md:w-1/2 md:justify-end">
+                  <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
+                    <li className="mr-3">
+                      <Link
+                        className="inline-block py-2 px-4 text-white no-underline"
+                        to="/"
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    {isAuth ? (
+                      <>
+                        <li className="mr-3">
+                          <Link
+                            className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                            to="/create"
+                          >
+                            CreatePost
+                          </Link>
+                        </li>
+                        <li className="mr-3">
+                          <Link
+                            className="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                            to="/profile"
+                          >
+                            Profile
+                          </Link>
+                        </li>
+                        <li className="mr-3">
+                          <button
+                            className="bg-red-500 hover:bg-red-700 py-2 px-3 text-white text-center rounded"
+                            onClick={Logout}
+                          >
+                            Logout
+                          </button>
+                        </li>
+                      </>
+                    ) : (
+                      <li className="mr-3">
+                        <Link
+                          className="inline-block bg-blue-500 rounded no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                          to="/login"
+                        >
+                          Login
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </nav>
           </div>
         </nav>
         <Routes>
