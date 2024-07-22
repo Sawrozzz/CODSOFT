@@ -3,6 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <>
+    <section className="about-section">
       <div className="about-container">
         <h2>About Me</h2>
         <p>
@@ -47,6 +48,7 @@ const About = () => {
           </span>
         </li>
       </div>
+      </section>  
     </>
   );
 };
