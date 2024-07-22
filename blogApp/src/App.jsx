@@ -48,7 +48,7 @@ const App = () => {
               id="menu"
             >
               <nav>
-                <ul className="md:flex  text-base text-gray-700 pt-4 md:pt-0">
+                <ul className="md:flex  text-base text-white pt-4 md:pt-0">
                   <li>
                     <Link
                       className="text-lg px-3 py-2 rounded hover:bg-gray-700"
