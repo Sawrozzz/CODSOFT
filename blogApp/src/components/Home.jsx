@@ -21,7 +21,7 @@ const Home = ({ isAuth }) => {
       );
     };
     getPosts();
-  });
+  }, []);
 
   const deleteOnePost = async (id) => {
     const post = doc(db, "posts", id);
@@ -34,31 +34,36 @@ const Home = ({ isAuth }) => {
 
   return (
     <>
-    <h1 className="text-4xl font-bold text-center mt-4 mb-2">Read all the blogs here</h1>
+      <h1 className="text-4xl font-bold text-center mt-4 mb-2">
+        Read all the blogs here
+      </h1>
       <div className="flex flex-col-reverse">
         {posts.map((post) => (
           <div key={post.id} className="bg-white p-4 m-4 rounded-md shadow-md">
             <h1 className="text-xl font-bold">{post.title}</h1>
             <p>{post.content}</p>
-            <p className="text-sm text-gray-500">@{post.author.name}</p>
-            {isAuth && post.author.id === auth.currentUser.uid && (
+
+            {post.author && (
               <>
-                <div className="flex gap-4">
-                  <button
-                    onClick={() => deleteOnePost(post.id)}
-                    className="bg-red-500 hover:bg-red-700 mt-2 text-white font-bold py-2 px-2 rounded"
-                  >
-                    Delete Post
-                  </button>
-                  <button
-                    onClick={() => {
-                      handleEditPost(post.id, post.title, post.content);
-                    }}
-                    className="bg-green-500 hover:bg-green-700 mt-2 text-white font-bold py-2 px-2 rounded"
-                  >
-                    Update Post
-                  </button>
-                </div>
+                <p className="text-sm text-gray-500">@{post.author.name}</p>
+                {isAuth && post.author.id === auth.currentUser.uid && (
+                  <div className="flex gap-4">
+                    <button
+                      onClick={() => deleteOnePost(post.id)}
+                      className="bg-red-500 hover:bg-red-700 mt-2 text-white font-bold py-2 px-2 rounded"
+                    >
+                      Delete Post
+                    </button>
+                    <button
+                      onClick={() => {
+                        handleEditPost(post.id, post.title, post.content);
+                      }}
+                      className="bg-green-500 hover:bg-green-700 mt-2 text-white font-bold py-2 px-2 rounded"
+                    >
+                      Update Post
+                    </button>
+                  </div>
+                )}
               </>
             )}
           </div>

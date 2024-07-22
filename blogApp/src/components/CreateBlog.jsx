@@ -1,9 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
-import { data } from "autoprefixer";
 
 const CreateBlog = ({ isAuth }) => {
   const [title, setTitle] = useState("");
@@ -22,7 +21,6 @@ const CreateBlog = ({ isAuth }) => {
     await addDoc(postRef, {
       title,
       content,
-      data: serverTimestamp(),
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     navigate("/");
